@@ -2,25 +2,56 @@ const express = require('express');
 const Mongo = require('../database/mongo');
 const { Schema } = require('mongoose');
 const route = express.Router();
+const bcrypt = require('bcrypt');
+const saltRounds = 12;
+
 
 const userSchema = new Schema({
     name: String,
-    email: { type: String, unique: true},
+    email: { type: String, unique: true },
     password: String,
     lang: String
 })
 
 route.get("/user/:id", async (req, res) => {
-    res.send({ "message": "ok" });
+    try{
+        const db = await Mongo();
+        const Users = await db.model("users", userSchema);
+        const user = Users.findById(req.params.id).exec();
+        user.then((data)=>{
+           res.status(200).send({"status": "success", "result": data});
+        });
+    }catch(err){
+        console.error(err);
+        res.status(401).send({"status": "failed"});
+    }
 });
+
 route.post("/user/register", async (req, res) => {
     try {
         const db = await Mongo();
         const User = await db.model("users", userSchema);
-        const result = User.find().exec();
-        result.then((data) => {
-            res.status(200).send({ "message": "user registered", "user": data });
+        User.exists({ "email": req.body.email }).then((data) => {
+            if (data) {
+                res.status(409).send({ "message": "email already registered" });
+            } else {
+
+                bcrypt.genSalt(saltRounds, function (err, salt) {
+                    bcrypt.hash(req.body.password, salt, function (err, hash) {
+                        const user = new User({
+                            name: req.body.name,
+                            email: req.body.email,
+                            password: hash,
+                            lang: req.body.lang
+                        });
+                        user.save();
+                        res.status(201).send({ "message": "user registered successfully", "result": user });
+                    });
+                });
+
+            }
         });
+
     } catch (err) {
         console.error("Error: ", err);
         res.status(400).send({ "status": "failed" });
@@ -31,13 +62,16 @@ route.post("/user/login", async (req, res) => {
     try {
         const db = await Mongo();
         const User = await db.model("users", userSchema);
-        const result = User.findOne({"email": req.body.email}).exec();
-        result.then((data)=>{
-            if(data && data.password === req.body.password){
-                res.status(201).send({"status": "success", "message":"login successful"});
-            }else{
-                res.status(201).send({"status": "success", "message":"password not match"});
-            }
+        const result = User.findOne({ "email": req.body.email }).exec();
+        
+        result.then((data) => {
+            bcrypt.compare(req.body.password, data.password, function (err, result) {
+                if (result) {
+                    res.status(201).send({ "status": "success", "message": "login successful" });
+                } else {
+                    res.status(201).send({ "status": "success", "message": "password not match" });
+                }
+            });
         });
     } catch (err) {
         console.error("Error: ", err);
