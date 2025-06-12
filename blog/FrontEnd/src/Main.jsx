@@ -4,114 +4,8 @@ const Main = () => {
         <div>
 
             <main className="main">
-                <div className="slider slider--four">
-                    <div className="swiper mySwiper">
-                        <div className="swiper-wrapper">
-                            <div className="slider__item swiper-slide" data-background-image="assets/img/blog/29.jpg">
-                                <div className="slider__item-content">
-                                    <a href="blog-grid.html" className="category">interior</a>
-                                    <h4 className="slider__title">
-                                        <a href="post-default.html" className="slider__title-link">How To Design A Room Like An Interior Designer Step By Step</a>
-                                    </h4>
-                                    <ul className="slider__meta list-inline">
-                                        <li className="slider__meta-item">
-                                            <a href="author.html" className="slider__meta-link">
-                                                <img src="assets/img/author/1.jpg" alt="" className="slider__meta-img" />
-                                            </a>
-                                        </li>
-                                        <li className="slider__meta-item "><a href="author.html" className="slider__meta-link">David Smith</a>
-                                        </li>
-                                        <li className="slider__meta-item">  <span className="dot"></span> February 10, 2024</li>
 
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div className="slider__item  swiper-slide" data-background-image="assets/img/blog/28.jpg">
-                                <div className="slider__item-content">
-                                    <a href="blog-grid.html" className="category">livestyle</a>
-                                    <h4 className="slider__title">
-                                        <a href="post-default.html" className="slider__title-link">5 Effective Ways I’m Finding Focus in a Busy Season of Life</a>
-                                    </h4>
-                                    <ul className="slider__meta list-inline">
-                                        <li className="slider__meta-item">
-                                            <a href="author.html" className="slider__meta-link">
-                                                <img src="assets/img/author/1.jpg" alt="" className="slider__meta-img" />
-                                            </a>
-                                        </li>
-                                        <li className="slider__meta-item "><a href="author.html" className="slider__meta-link">David Smith</a>
-                                        </li>
-                                        <li className="slider__meta-item">  <span className="dot"></span> February 10, 2024</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div className="slider__item  swiper-slide" data-background-image="assets/img/blog/27.jpg">
-                                <div className="slider__item-content">
-                                    <a href="blog-grid.html" className="category">food</a>
-                                    <h4 className="slider__title">
-                                        <a href="post-default.html" className="slider__title-link">What Are Your Tips for Hosting an Easy Birthday Party?</a>
-                                    </h4>
-                                    <ul className="slider__meta list-inline">
-                                        <li className="slider__meta-item">
-                                            <a href="author.html" className="slider__meta-link">
-                                                <img src="assets/img/author/1.jpg" alt="" className="slider__meta-img" />
-                                            </a>
-                                        </li>
-                                        <li className="slider__meta-item "><a href="author.html" className="slider__meta-link">David Smith</a>
-                                        </li>
-                                        <li className="slider__meta-item">  <span className="dot"></span> February 10, 2024</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div className="slider__item  swiper-slide" data-background-image="assets/img/blog/8.jpg">
-                                <div className="slider__item-content">
-                                    <a href="blog-grid.html" className="category">travel</a>
-                                    <h4 className="slider__title">
-                                        <a href="post-default.html" className="slider__title-link">Get the Most Out of Iceland with our 10 Travel Tips</a>
-                                    </h4>
-                                    <ul className="slider__meta list-inline">
-                                        <li className="slider__meta-item">
-                                            <a href="author.html" className="slider__meta-link">
-                                                <img src="assets/img/author/1.jpg" alt="" className="slider__meta-img"/>
-                                            </a>
-                                        </li>
-                                        <li className="slider__meta-item "><a href="author.html" className="slider__meta-link">David Smith</a>
-                                        </li>
-                                        <li className="slider__meta-item">  <span className="dot"></span> February 10, 2024</li>
-
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div className="slider__item  swiper-slide"  data-background-image="assets/img/blog/23.jpg">
-                                <div className="slider__item-content">
-                                    <a href="blog-grid.html" className="category">interior</a>
-                                    <h4 className="slider__title">
-                                        <a href="post-default.html" className="slider__title-link">7 Holiday Decor Ideas and Exactly What I Love About Each One</a>
-                                    </h4>
-                                    <ul className="slider__meta list-inline">
-                                        <li className="slider__meta-item">
-                                            <a href="author.html" className="slider__meta-link">
-                                                <img src="assets/img/author/1.jpg" alt="" className="slider__meta-img"/>
-                                            </a>
-                                        </li>
-                                        <li className="slider__meta-item "><a href="author.html" className="slider__meta-link">David Smith</a>
-                                        </li>
-                                        <li className="slider__meta-item">  <span className="dot"></span> February 10, 2024</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <br />
 
                 <section className="bmog-home-4 mt-60">
                     <div className="container-fluid">
@@ -124,7 +18,7 @@ const Main = () => {
                                             <div className="post-card post-card--default">
                                                 <div className="post-card__image">
                                                     <a href="post-default.html" >
-                                                        <img src="assets/img/blog/12.jpg" alt=""/>
+                                                        <img src="assets/img/blog/12.jpg" alt="" />
                                                     </a>
                                                 </div>
 
@@ -139,7 +33,7 @@ const Main = () => {
                                                     <ul className="post-card__meta list-inline">
                                                         <li className="post-card__meta-item">
                                                             <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
                                                             </a>
                                                         </li>
                                                         <li className="post-card__meta-item ">
@@ -159,7 +53,7 @@ const Main = () => {
                                             <div className="post-card post-card--default">
                                                 <div className="post-card__image">
                                                     <a href="post-default.html" >
-                                                        <img src="assets/img/blog/8.jpg" alt=""/>
+                                                        <img src="assets/img/blog/8.jpg" alt="" />
                                                     </a>
                                                 </div>
 
@@ -174,7 +68,7 @@ const Main = () => {
                                                     <ul className="post-card__meta list-inline">
                                                         <li className="post-card__meta-item">
                                                             <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
                                                             </a>
                                                         </li>
                                                         <li className="post-card__meta-item ">
@@ -194,7 +88,7 @@ const Main = () => {
                                             <div className="post-card post-card--default">
                                                 <div className="post-card__image">
                                                     <a href="post-default.html" >
-                                                        <img src="assets/img/blog/13.jpg" alt=""/>
+                                                        <img src="assets/img/blog/13.jpg" alt="" />
                                                     </a>
                                                 </div>
 
@@ -209,7 +103,7 @@ const Main = () => {
                                                     <ul className="post-card__meta list-inline">
                                                         <li className="post-card__meta-item">
                                                             <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
                                                             </a>
                                                         </li>
                                                         <li className="post-card__meta-item ">
@@ -229,7 +123,7 @@ const Main = () => {
                                             <div className="post-card post-card--default">
                                                 <div className="post-card__image">
                                                     <a href="post-default.html" >
-                                                        <img src="assets/img/blog/7.jpg" alt=""/>
+                                                        <img src="assets/img/blog/7.jpg" alt="" />
                                                     </a>
                                                 </div>
 
@@ -244,43 +138,7 @@ const Main = () => {
                                                     <ul className="post-card__meta list-inline">
                                                         <li className="post-card__meta-item">
                                                             <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
-                                                            </a>
-                                                        </li>
-                                                        <li className="post-card__meta-item ">
-                                                            <a href="author.html" className="post-card__meta-link">David Smith</a>
-                                                        </li>
-                                                        <li className="post-card__meta-item">
-                                                            <span className="dot"></span> February 10, 2022
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-
-                                        <div className="col-lg-6 col-md-6">
-                                            <div className="post-card post-card--default">
-                                                <div className="post-card__image">
-                                                    <a href="post-default.html" >
-                                                        <img src="assets/img/blog/16.jpg" alt=""/>
-                                                    </a>
-                                                </div>
-
-                                                <div className="post-card__content">
-                                                    <a href="blog-grid.html" className="category">food</a>
-                                                    <h5 className="post-card__title">
-                                                        <a href="post-default.html" className="post-card__title-link">5 Effective Ways I’m Finding Focus in a Busy Season of Life</a>
-                                                    </h5>
-                                                    <p className="post-card__exerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam atque ipsa laborum sunt distinctio...
-                                                    </p>
-
-                                                    <ul className="post-card__meta list-inline">
-                                                        <li className="post-card__meta-item">
-                                                            <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
                                                             </a>
                                                         </li>
                                                         <li className="post-card__meta-item ">
@@ -301,7 +159,7 @@ const Main = () => {
                                             <div className="post-card post-card--default">
                                                 <div className="post-card__image">
                                                     <a href="post-default.html" >
-                                                        <img src="assets/img/blog/2.jpg" alt=""/>
+                                                        <img src="assets/img/blog/16.jpg" alt="" />
                                                     </a>
                                                 </div>
 
@@ -316,7 +174,7 @@ const Main = () => {
                                                     <ul className="post-card__meta list-inline">
                                                         <li className="post-card__meta-item">
                                                             <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
                                                             </a>
                                                         </li>
                                                         <li className="post-card__meta-item ">
@@ -337,7 +195,7 @@ const Main = () => {
                                             <div className="post-card post-card--default">
                                                 <div className="post-card__image">
                                                     <a href="post-default.html" >
-                                                        <img src="assets/img/blog/3.jpg" alt=""/>
+                                                        <img src="assets/img/blog/2.jpg" alt="" />
                                                     </a>
                                                 </div>
 
@@ -352,7 +210,7 @@ const Main = () => {
                                                     <ul className="post-card__meta list-inline">
                                                         <li className="post-card__meta-item">
                                                             <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
                                                             </a>
                                                         </li>
                                                         <li className="post-card__meta-item ">
@@ -373,7 +231,7 @@ const Main = () => {
                                             <div className="post-card post-card--default">
                                                 <div className="post-card__image">
                                                     <a href="post-default.html" >
-                                                        <img src="assets/img/blog/13.jpg" alt=""/>
+                                                        <img src="assets/img/blog/3.jpg" alt="" />
                                                     </a>
                                                 </div>
 
@@ -388,7 +246,43 @@ const Main = () => {
                                                     <ul className="post-card__meta list-inline">
                                                         <li className="post-card__meta-item">
                                                             <a href="author.html" className="post-card__meta-link">
-                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img"/>
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
+                                                            </a>
+                                                        </li>
+                                                        <li className="post-card__meta-item ">
+                                                            <a href="author.html" className="post-card__meta-link">David Smith</a>
+                                                        </li>
+                                                        <li className="post-card__meta-item">
+                                                            <span className="dot"></span> February 10, 2022
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div className="col-lg-6 col-md-6">
+                                            <div className="post-card post-card--default">
+                                                <div className="post-card__image">
+                                                    <a href="post-default.html" >
+                                                        <img src="assets/img/blog/13.jpg" alt="" />
+                                                    </a>
+                                                </div>
+
+                                                <div className="post-card__content">
+                                                    <a href="blog-grid.html" className="category">food</a>
+                                                    <h5 className="post-card__title">
+                                                        <a href="post-default.html" className="post-card__title-link">5 Effective Ways I’m Finding Focus in a Busy Season of Life</a>
+                                                    </h5>
+                                                    <p className="post-card__exerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam atque ipsa laborum sunt distinctio...
+                                                    </p>
+
+                                                    <ul className="post-card__meta list-inline">
+                                                        <li className="post-card__meta-item">
+                                                            <a href="author.html" className="post-card__meta-link">
+                                                                <img src="assets/img/author/1.jpg" alt="" className="post-card__meta-img" />
                                                             </a>
                                                         </li>
                                                         <li className="post-card__meta-item ">
@@ -423,7 +317,7 @@ const Main = () => {
                                         <div className="widget__author">
                                             <div className="widget__author-top">
                                                 <a href="author.html" className="widget__author-link">
-                                                    <img src="assets/img/author/1.jpg" alt="" className="widget__author-img"/>
+                                                    <img src="assets/img/author/1.jpg" alt="" className="widget__author-img" />
                                                 </a>
                                             </div>
                                             <div className="widget__author-content">
@@ -456,11 +350,11 @@ const Main = () => {
                                     <div className="widget">
                                         <h5 className="widget__title">Latest Posts</h5>
                                         <ul className="widget__latest-posts">
-                                      
+
                                             <li className="widget__latest-posts__item">
                                                 <div className="widget__latest-posts-image">
                                                     <a href="post-default.html" className="widget__latest-posts-link">
-                                                        <img src="assets/img/latest/1.jpg" alt="..." className="widget__latest-posts-img"/>
+                                                        <img src="assets/img/latest/1.jpg" alt="..." className="widget__latest-posts-img" />
                                                     </a>
                                                 </div>
                                                 <div className="widget__latest-posts-count">1</div>
@@ -519,18 +413,18 @@ const Main = () => {
                                         <ul className="widget-instagram widget__instagram">
                                             <li className="widget__instagram-item">
                                                 <a className="widget__instagram-link" href="index-4.html#">
-                                                    <img src="assets/img/instagram/1.jpg" alt="" className="widget__instagram-img"/>
+                                                    <img src="assets/img/instagram/1.jpg" alt="" className="widget__instagram-img" />
                                                 </a>
                                             </li>
 
                                             <li className="widget__instagram-item">
                                                 <a className="widget__instagram-link" href="index-4.html#">
-                                                    <img src="assets/img/instagram/2.jpg" alt="" className="widget__instagram-img"/>
+                                                    <img src="assets/img/instagram/2.jpg" alt="" className="widget__instagram-img" />
                                                 </a>
                                             </li>
                                             <li className="widget__instagram-item">
                                                 <a className="widget__instagram-link" href="index-4.html#">
-                                                    <img src="assets/img/instagram/3.jpg" alt="" className="widget__instagram-img"/>
+                                                    <img src="assets/img/instagram/3.jpg" alt="" className="widget__instagram-img" />
                                                 </a>
                                             </li>
 
@@ -586,7 +480,7 @@ const Main = () => {
                                         <h5 className="widget__title">ads</h5>
                                         <div className="widget__ads">
                                             <a href="index-4.html#" className="widget__ads-link">
-                                                <img src="assets/img/ads/ads3.jpg" alt="" className="widget__ads-img"/>
+                                                <img src="assets/img/ads/ads3.jpg" alt="" className="widget__ads-img" />
                                             </a>
                                         </div>
                                     </div>
@@ -609,7 +503,7 @@ const Main = () => {
 
                                     <form action="index-4.html#" className="newslettre__form">
                                         <input type="email" className="newslettre__form-input form-control" placeholder="Your email adress" required="required" />
-                                            <button className="newslettre__form-submit" type="submit">Subscribe</button>
+                                        <button className="newslettre__form-submit" type="submit">Subscribe</button>
                                     </form>
 
                                     <ul className="list-inline social-media social-media--layout-three">

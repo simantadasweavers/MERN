@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 slug = require('mongoose-slug-updater');
 mongoose.plugin(slug);
 const { faker } = require('@faker-js/faker');
+const jwt = require('jsonwebtoken');
+
 
 const blogSchema = new Schema({
     title: String,
@@ -51,17 +53,26 @@ route.post("/post", async (req, res) => {
         const db = await Mongo();
         const Posts = db.model("posts", blogSchema);
 
-        const post = new Posts({
-            title: req.body.title,
-            description: req.body.description,
-            excerpt: req.body.excerpt,
-            slug: slug,
-            thumbnail_img: req.body.thumbnail_img,
-            post_date: req.body.post_date,
-        });
+        try{
+            let decoded = jwt.verify(req.body.token, 'shhhhh');
 
-        await post.save();
-        return res.status(201).send({ status: "success", result: post });
+            if (decoded.id) {
+            const post = new Posts({
+                title: req.body.title,
+                description: req.body.description,
+                excerpt: req.body.excerpt,
+                slug: slug,
+                thumbnail_img: req.body.thumbnail_img,
+                post_date: req.body.post_date,
+            });
+
+            await post.save();
+            return res.status(201).send({ status: "success", result: post });
+        }
+        }catch(err){
+            return res.status(403).send({ status: "failed", result: "invalid token" });
+        }
+
     } catch (err) {
         console.error("Error creating post:", err);
         return res.status(500).send({ status: "failed", message: "Server error while creating post" });
@@ -74,14 +85,14 @@ route.post("/post/fake", async (req, res) => {
         const db = await Mongo();
         const Posts = db.model("posts", blogSchema);
         let i = 0;
-        while (i < 20) {
+        while (i < 10) {
             const post = new Posts({
                 title: faker.lorem.lines(1),
                 description: faker.lorem.paragraph(2),
                 excerpt: faker.lorem.lines(2),
                 slug: slug,
                 thumbnail_img: faker.image.avatar(),
-                // post_date: faker.internet.email(),
+                post_date: faker.date.between({ from: '2025-01-01', to: Date.now() }),
             });
 
             await post.save();

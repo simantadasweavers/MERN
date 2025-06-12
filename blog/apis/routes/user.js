@@ -4,6 +4,7 @@ const { Schema } = require('mongoose');
 const route = express.Router();
 const bcrypt = require('bcrypt');
 const saltRounds = 12;
+const jwt = require('jsonwebtoken');
 
 
 const userSchema = new Schema({
@@ -45,7 +46,8 @@ route.post("/user/register", async (req, res) => {
                             lang: req.body.lang
                         });
                         user.save();
-                        res.status(201).send({ "message": "user registered successfully", "result": user });
+                        let token = jwt.sign({ 'id': user._id, 'email': user.email }, 'shhhhh');
+                        res.status(201).send({ "message": "user registered successfully", "result": user, "token": token});
                     });
                 });
 
@@ -67,7 +69,8 @@ route.post("/user/login", async (req, res) => {
         result.then((data) => {
             bcrypt.compare(req.body.password, data.password, function (err, result) {
                 if (result) {
-                    res.status(201).send({ "status": "success", "message": "login successful" });
+                    let token = jwt.sign({ 'id': data._id, 'email': data.email }, 'shhhhh');
+                    res.status(201).send({ "status": "success", "message": "login successful", "token": token });
                 } else {
                     res.status(201).send({ "status": "success", "message": "password not match" });
                 }

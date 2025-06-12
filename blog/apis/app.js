@@ -16,6 +16,12 @@ app.get("", (req, res)=>{
 });
 
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-output.json');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+
 app.listen(process.env.APP_PORT, () =>{
     console.log("App running on port: ", process.env.APP_PORT);
 });
