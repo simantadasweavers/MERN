@@ -46,8 +46,9 @@ route.post("/user/register", async (req, res) => {
                             lang: req.body.lang
                         });
                         user.save();
-                        let token = jwt.sign({ 'id': user._id, 'email': user.email }, 'shhhhh');
-                        res.status(201).send({ "message": "user registered successfully", "result": user, "token": token});
+                        let access_token = jwt.sign({ 'id': user._id, 'email': user.email }, 'shhhhh', {expiresIn: process.env.ACCESS_TOKEN_EXPIRATION });
+                        let refresh_token = jwt.sign({ 'id': user._id, 'email': user.email }, 'shhhhh', {expiresIn: process.env.REFRESH_TOKEN_EXPIRATION });
+                        res.status(201).send({ "message": "user registered successfully", "result": user, "access_token": access_token, "refresh_token": refresh_token});
                     });
                 });
 
