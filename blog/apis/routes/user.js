@@ -70,8 +70,10 @@ route.post("/user/login", async (req, res) => {
         result.then((data) => {
             bcrypt.compare(req.body.password, data.password, function (err, result) {
                 if (result) {
-                    let token = jwt.sign({ 'id': data._id, 'email': data.email }, 'shhhhh');
-                    res.status(201).send({ "status": "success", "message": "login successful", "token": token });
+                    // let token = jwt.sign({ 'id': data._id, 'email': data.email }, 'shhhhh');
+                    let access_token = jwt.sign({ 'id': user._id, 'email': user.email }, 'shhhhh', {expiresIn: process.env.ACCESS_TOKEN_EXPIRATION });
+                        let refresh_token = jwt.sign({ 'id': user._id, 'email': user.email }, 'shhhhh', {expiresIn: process.env.REFRESH_TOKEN_EXPIRATION });
+                    res.status(201).send({ "status": "success", "message": "login successful", "access_token": access_token, "refresh_token": refresh_token });
                 } else {
                     res.status(201).send({ "status": "success", "message": "password not match" });
                 }
